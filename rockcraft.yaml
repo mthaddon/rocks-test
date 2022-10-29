@@ -1,0 +1,18 @@
+name: bash-and-dump
+summary: A test OCI image.
+description: A test OCI image.
+license: Apache-2.0
+
+version: "1.0"
+base: bare
+build_base: ubuntu:22.04
+cmd: [/bin/ls]
+platforms:
+  amd64:
+
+parts:  
+  bash-and-dump:
+    stage-packages:
+    - bash
+    plugin: dump
+    source: ./dir/
